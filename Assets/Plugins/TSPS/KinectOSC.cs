@@ -19,6 +19,8 @@ public class KinectOSC : MonoBehaviour  {
 		centerOfWorld = GameObject.Find("CenterOfWorld");
 	}
 
+	public Vector3 coordinates;
+
 	public void OnEnable(){
 		UnityOSCReceiver.OSCMessageReceived += new UnityOSCReceiver.OSCMessageReceivedHandler(OSCMessageReceived);
 
@@ -31,6 +33,7 @@ public class KinectOSC : MonoBehaviour  {
 		string address = message.Address;
 		ArrayList args = message.Values;
 		
+
 		if( address == "/righthand")
 		{
 			rightHandCoord = new Vector3((float)args[0], (float)args[1], (float)args[2]);

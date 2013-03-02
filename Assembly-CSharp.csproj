@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{C90E7179-C988-D678-E424-F42F165359BD}</ProjectGuid>
+	<ProjectGuid>{5C240029-F3F5-B7A2-376D-90388164143C}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -44,14 +44,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\TerrainDestruction\Scripts\DeformOnClick.cs" />
      <Compile Include="Assets\TerrainDestruction\Scripts\ShowTouchPoint.cs" />
+     <Compile Include="Assets\TerrainDestruction\Scripts\TerrainDeformer.cs" />
      <None Include="Assets\TerrainDestruction\README.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{AFFFA578-0823-39EC-ED25-1F3DF91124AA}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{B6C8B4EA-829A-D484-AEF5-4ABB80423162}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{7F2F15A1-78D4-AA08-2E16-ED49ABCA363F}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+      <Project>{6045D461-3978-859A-5FBD-73DC72C80EA2}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

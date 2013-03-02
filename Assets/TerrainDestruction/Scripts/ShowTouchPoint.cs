@@ -15,7 +15,9 @@ public class ShowTouchPoint : MonoBehaviour
 	
 	void Update()
 	{
+
 		Vector3 currentRightHandCoord = Camera.main.transform.GetComponent<KinectOSC>().rightHandCoord;
+
 		currentRightHandCoord.z = 700;
 		gui.transform.position = currentRightHandCoord;
 	}

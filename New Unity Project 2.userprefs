@@ -1,9 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/TSPS/KinectOSC.cs">
     <Files>
       <File FileName="Assets/Plugins/TSPS/KinectOSC.cs" Line="43" Column="29" />
       <File FileName="Assets/Standard Assets/DeformOnClick.cs" Line="9" Column="28" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TerrainDestruction/Scripts/ShowTouchPoint.cs">
+    <Files>
+      <File FileName="Assets/Plugins/TSPS/KinectOSC.cs" Line="26" Column="1" />
+      <File FileName="Assets/TerrainDestruction/Scripts/DeformOnClick.cs" Line="14" Column="11" />
+      <File FileName="Assets/TerrainDestruction/Scripts/ShowTouchPoint.cs" Line="19" Column="30" />
+>>>>>>> 71a25433fa5fae024837131951a17211d1ada457
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
