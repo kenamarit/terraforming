@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/TSPS/KinectOSC.cs">
+    <Files>
+      <File FileName="Assets/Plugins/TSPS/KinectOSC.cs" Line="43" Column="29" />
+      <File FileName="Assets/Standard Assets/DeformOnClick.cs" Line="9" Column="28" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
