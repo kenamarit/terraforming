@@ -8,7 +8,7 @@ public class DeformOnClick : MonoBehaviour
 	private bool clickOn = false;
 	public int brushHeight = 3;
 	
-	TerrainDeformer deformer;
+	public TerrainDeformer deformer;
 	
 	void Start () {
 		deformer = GetComponent<TerrainDeformer>();
@@ -18,40 +18,24 @@ public class DeformOnClick : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		
-		Vector3 rightHandCoord = kinect.transform.GetComponent<KinectOSC>().rightHandCoord;
-		Vector3 handScreenPos = Camera.main.WorldToScreenPoint(rightHandCoord);
-		
-		if( Input.GetKeyDown("t") )
+		if( !kinect.transform.GetComponent<KinectOSC>().onMenu )
 		{
-			clickOn = !clickOn;
+			Vector3 rightHandCoord = kinect.transform.GetComponent<KinectOSC>().rightHandCoord;
+			Vector3 handScreenPos = Camera.main.WorldToScreenPoint(rightHandCoord);
+			
+			if( kinect.transform.GetComponent<KinectOSC>().isBreathing )
+			{
+				brushHeight = Mathf.Abs(brushHeight);
+			}
+			else
+			{
+				brushHeight = (Mathf.Abs(brushHeight)) * -1;
+			}
+
+			
+			
 		}
-		
-		if( kinect.transform.GetComponent<KinectOSC>().isBreathing )
-		{
-			brushHeight = brushHeight;
-		}
-		else
-		{
-			brushHeight = -brushHeight;
-		}
-		
-		StartCoroutine(ResizeMountain());
-		
 		
 	}
 	
-	IEnumerator ResizeMountain()
-	{
-		if( clickOn )
-		{
-			RaycastHit hit;
-			if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000)) 
-			{
-				deformer.Damage(hit.point, brushHeight);
-				
-			}
-		}
-		yield return new WaitForSeconds(1.0f);
-	}
 }

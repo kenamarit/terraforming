@@ -6,7 +6,7 @@ using System.Threading;
 public class TerrainDeformer : MonoBehaviour
 {
 	public Texture2D crater;
-	public float craterSize = 5;
+	public float craterSize = 20;
 	
 	Color[] template;
 
@@ -20,7 +20,7 @@ public class TerrainDeformer : MonoBehaviour
 	List<TerrainDeformerJob> outbox = new List<TerrainDeformerJob> ();
 	int craterWidth, craterHeight;
 	
-	void OnApplicationQuit ()
+	public void OnApplicationQuit ()
 	{
 		data.SetHeights (0, 0, heightRestore);
 		data.SetAlphamaps (0, 0, alphaRestore);
@@ -128,9 +128,7 @@ public class TerrainDeformer : MonoBehaviour
 		
 		var local = position - transform.position;
     	var nlocal = new Vector3(Mathf.InverseLerp(0f, data.size.x, local.x), 0f, Mathf.InverseLerp(0f, data.size.z, local.z));
-		
-		
-		
+
 		
 		var job = new TerrainDeformerJob ();
 		

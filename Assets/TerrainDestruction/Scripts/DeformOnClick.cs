@@ -2,11 +2,14 @@ using UnityEngine;
 using System.Collections;
 
 public class DeformOnClick : MonoBehaviour {
-
+/*
 	TerrainDeformer deformer;
+	
 	void Start () {
 		deformer = GetComponent<TerrainDeformer>();
 	}
+	
+	
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,4 +24,5 @@ public class DeformOnClick : MonoBehaviour {
 			}
 		}
 	}
+	*/
 }
